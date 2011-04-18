@@ -1,0 +1,14 @@
+{
+	"name": "Instapinboard for Chrome"
+	, "version": "0.1"
+	, "description": "Right click, add shit to Pinboard.in"
+	, "background_page": "background.html"
+	, "permissions": [
+		"contextMenus"
+		, "tabs"
+		, "https://api.pinboard.in/"
+	]
+	, "icons": {
+		"16": "bluepin.png"
+	}
+}

@@ -1,0 +1,37 @@
+#settings {
+	background-color: #E9E9E9;
+	width: 600px;
+	margin-left:auto;
+  	margin-right:auto;
+}
+#settings td {
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 30px;
+}
+
+#settings input {
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 30px;
+	border-bottom-color: #dddddd;
+	border-bottom-style: solid;
+  	border-bottom-width: 1px;
+  	border-collapse: collapse;
+  	border-left-color: #dddddd;
+  	border-left-style: solid;
+  	border-left-width: 1px;
+  	border-right-color: #dddddd;
+  	border-right-style: solid;
+  	border-right-width: 1px;
+  	border-top-color: #dddddd;
+  	border-top-style: solid;
+  	border-top-width: 1px;
+	margin-bottom: 15px;
+}
+
+#settings submit {
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 30px;
+}

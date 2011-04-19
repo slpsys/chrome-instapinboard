@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<link rel="stylesheet" href="settings.css" />
 		<script type="text/javascript" src="chrome-instapinboard.js"></script>
 	</head>
 	<body>
@@ -10,7 +11,11 @@
 				<tr><td><input id="uname"/></td></tr>
 				<tr><td>Password:</td></tr>
 				<tr><td><input id="passwd" type="password"/></td></tr>
-				<tr><td><input type="submit" onclick="setAcctDetails();return false;"/></td></tr>
+				<tr><td>
+					<input type="submit" onclick="setAcctDetails();return false;"/>
+					<img src="spinner.gif" />
+					Verifying Pinboard Account..
+				</td></tr>
 				</table>
 			</form>
 		</div>

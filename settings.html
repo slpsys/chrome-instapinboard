@@ -11,11 +11,17 @@
 				<tr><td><input id="uname"/></td></tr>
 				<tr><td>Password:</td></tr>
 				<tr><td><input id="passwd" type="password"/></td></tr>
-				<tr><td>
-					<input type="submit" onclick="setAcctDetails();return false;"/>
-					<img src="spinner.gif" />
-					Verifying Pinboard Account..
-				</td></tr>
+				</table>
+				<table>
+				<tr>
+					<td>
+						<input type="submit" onclick="setAcctDetails();return false;"/>
+					</td>
+					<td id="status">
+						<img src="spinner.gif"/>
+						Verifying Pinboard Account..
+					</td>
+				</tr>
 				</table>
 			</form>
 		</div>

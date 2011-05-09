@@ -53,15 +53,40 @@ function post(postInfo, account, callback) {
 	req.send();
 }
 
+function testAccount (postInfo, account, onSuccess) {
+	var req =  new XMLHttpRequest();
+	var url = constructUrl("api.pinboard.in/v1/posts/recent", 
+		{
+			"count": "1"
+		}, account);
+	req.open("GET", url);
+	req.onreadystatechange = function() {
+		if (req.readyState == 4) {
+			toggleStatus();
+			if (req.status == 200) {
+				onSuccess();
+			}
+			else {
+				alert("There was an issue loading your account. Make sure your account details are correct.");
+			}
+		}
+	}
+	req.send();
+}
+
 function setAcctDetails() {
 	var uname = document.getElementById("uname"),
 		passwd = document.getElementById("passwd");
-		
+	toggleStatus();
 	if (uname.value !== "" && passwd.value !== "") {
 		var account = { "UserName": uname.value, "Password": passwd.value };
-		localStorage.setItem(keyName, JSON.stringify(account));
-		if (localStorage.getItem(queueName))
-			post(JSON.parse(localStorage.getItem(queueName)), account, closeTab);
+		if (localStorage.getItem(queueName)) {
+			var queueContent = localStorage.getItem(queueName);
+			testAccount(queueContent, account, function() {
+				localStorage.setItem(keyName, JSON.stringify(account));
+				post(JSON.parse(queueContent), account, closeTab);
+			});
+		}
 		else  {
 			alert("Was not able to post URL after connecting account. Please try posting it again.");
 			closeTab();
@@ -70,6 +95,14 @@ function setAcctDetails() {
 	else {
 		alert("Please finish entering the correct values first.");
 	}
+}
+
+function toggleStatus() {
+	var statusBar = document.getElementById('status');
+	if (statusBar.style.visibility === 'visible')
+		statusBar.style.visibility = 'hidden';
+	else
+		statusBar.style.visibility = 'visible';
 }
 
 function closeTab() {

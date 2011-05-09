@@ -35,3 +35,7 @@
 	font-family: helvetica;
 	font-size: 30px;
 }
+
+#status {
+	visibility: hidden;
+}

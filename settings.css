@@ -3,8 +3,11 @@
 	width: 600px;
 	margin-left:auto;
   	margin-right:auto;
+	border-radius: 20px;
+	display: block;
 }
-#settings td {
+
+#settings td,submit {
 	font-weight: bold;
 	font-family: helvetica;
 	font-size: 30px;
@@ -30,12 +33,32 @@
 	margin-bottom: 15px;
 }
 
-#settings submit {
+#form {
+	margin-top: 10px;
+}
+
+.titlebar {
+	display: inline;	
+	width: 100%;
+}
+.titleitem {
+	display: inline;
+	float: left;	
+}
+
+#title {
 	font-weight: bold;
 	font-family: helvetica;
-	font-size: 30px;
+	width: 542px;
+	margin-left: 10px;
+	margin-top: 8px;
+	text-align: center;
+}
+#title span {
+	margin-left: 10px;
 }
 
 #status {
 	visibility: hidden;
 }
+

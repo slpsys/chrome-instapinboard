@@ -5,25 +5,36 @@
 	</head>
 	<body>
 		<div id ="settings">
-			<form>
-				<table>
-				<tr><td>Username:</td></tr>
-				<tr><td><input id="uname"/></td></tr>
-				<tr><td>Password:</td></tr>
-				<tr><td><input id="passwd" type="password"/></td></tr>
-				</table>
-				<table>
-				<tr>
-					<td>
-						<input type="submit" onclick="setAcctDetails();return false;"/>
-					</td>
-					<td id="status">
-						<img src="spinner.gif"/>
-						Verifying Pinboard Account..
-					</td>
-				</tr>
-				</table>
-			</form>
+			<div class="titlebar">
+				<div class="titleitem">
+					<img src="instapinboard_48.png"/>
+				</div>
+				<div id="title" class="titleitem">
+					<div>Log into <a href="http://pinboard.in">Pinboard.in</a></div>
+					<div>Account info is only stored in your browser!</div>
+				</div>
+			</div>
+			<div id="form">
+				<form>
+					<table>
+					<tr><td>Username:</td></tr>
+					<tr><td><input id="uname"/></td></tr>
+					<tr><td>Password:</td></tr>
+					<tr><td><input id="passwd" type="password"/></td></tr>
+					</table>
+					<table>
+					<tr>
+						<td>
+							<input type="submit" onclick="setAcctDetails();return false;"/>
+						</td>
+						<td id="status">
+							<img src="spinner.gif"/>
+							Verifying Pinboard Account..
+						</td>
+					</tr>
+					</table>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>

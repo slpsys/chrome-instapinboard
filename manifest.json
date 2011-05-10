@@ -9,6 +9,8 @@
 		, "https://api.pinboard.in/"
 	]
 	, "icons": {
-		"16": "bluepin.png"
+		"16": "instapinboard_16.png"
+		, "48": "instapinboard_48.png"
+		, "128": "instapinboard_128.png"
 	}
 }

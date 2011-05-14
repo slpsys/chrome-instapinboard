@@ -77,8 +77,8 @@ function testAccount (postInfo, account, onSuccess) {
 function setAcctDetails() {
 	var uname = document.getElementById("uname"),
 		passwd = document.getElementById("passwd");
-	toggleStatus();
 	if (uname.value !== "" && passwd.value !== "") {
+		toggleStatus();
 		var account = { "UserName": uname.value, "Password": passwd.value };
 		if (localStorage.getItem(queueName)) {
 			var queueContent = localStorage.getItem(queueName);

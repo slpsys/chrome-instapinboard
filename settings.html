@@ -5,36 +5,40 @@
 	</head>
 	<body>
 		<div id ="settings">
-			<div class="titlebar">
-				<div class="titleitem">
-					<img src="instapinboard_48.png"/>
-				</div>
-				<div id="title" class="titleitem">
-					<div>Log into <a href="http://pinboard.in">Pinboard.in</a></div>
-					<div>Account info is only stored in your browser!</div>
-				</div>
-			</div>
-			<div id="form">
-				<form>
-					<table>
-					<tr><td>Username:</td></tr>
-					<tr><td><input id="uname"/></td></tr>
-					<tr><td>Password:</td></tr>
-					<tr><td><input id="passwd" type="password"/></td></tr>
-					</table>
-					<table>
-					<tr>
-						<td>
-							<input type="submit" onclick="setAcctDetails();return false;"/>
-						</td>
-						<td id="status">
-							<img src="spinner.gif"/>
-							Verifying Pinboard Account..
-						</td>
-					</tr>
-					</table>
-				</form>
-			</div>
+			<table class="titlebar">
+				<tr>
+					<td id="logocell">
+						<img class="titlelogo" src="instapinboard_48.png"/>
+					</td>
+					<td id="titlecell">
+						<div>Log into <a href="http://pinboard.in">Pinboard.in</a></div>
+						<div>Account info is only stored in your browser!</div>
+					</td>
+				</tr>
+				<tr>
+					<form>
+						<table class="formbody">
+							<tr><td>Username:</td></tr>
+							<tr><td><input class="textinput" id="uname"/></td></tr>
+							<tr><td>Password:</td></tr>
+							<tr><td><input class="textinput" id="passwd" type="password"/></td></tr>
+						</table>
+						<table class="submitbody">
+							<tr>
+								<td id="submitbutton">
+									<input type="submit" onclick="setAcctDetails();return false;"/>
+								</td>
+								<td id="status">
+									<img src="spinner.gif"/><span>Verifying Pinboard Account..</span>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</tr>
+			</table>
+			<!--<div id="form">
+				
+			</div>-->
 		</div>
 	</body>
 </html>

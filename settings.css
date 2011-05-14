@@ -71,7 +71,7 @@ table {
 	border-top-left-radius: 20px;
 }
 #titlecell > div {
-	font-size: 12px;
+	font-size: 18	px;
 	font-weight: bold;
 	font-family: helvetica;
 	margin-right: 40px;
@@ -85,6 +85,10 @@ table {
 	margin-left: 48px;
 	width: 504px;
 }
+.optionsbody {
+	margin-left: 48px;
+	width: 504px;
+}
 .formbody td {
 	font-size: 26px;
 	width: 100%;
@@ -92,13 +96,14 @@ table {
 .submitbody {
 	margin-left: 48px;
 }
-#submitbutton {
-/*	padding-top: 10px;*/
-}
 .textinput {
 	width: 100%;
 }
 .submitbody span {
 	padding-top: 10px;
 	vertical-align: top;
+}
+.options td {
+	font-size: 18px;
+	vertical-align: middle;
 }

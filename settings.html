@@ -11,7 +11,7 @@
 						<img class="titlelogo" src="instapinboard_48.png"/>
 					</td>
 					<td id="titlecell">
-						<div>Log into <a href="http://pinboard.in">Pinboard.in</a></div>
+						<div>Log into <a href="http://pinboard.in" tabindex=-1>Pinboard.in</a></div>
 						<div>Account info is only stored in your browser!</div>
 					</td>
 				</tr>
@@ -22,6 +22,14 @@
 							<tr><td><input class="textinput" id="uname"/></td></tr>
 							<tr><td>Password:</td></tr>
 							<tr><td><input class="textinput" id="passwd" type="password"/></td></tr>
+							<tr><td>Space-delimited tag[s]:</td></tr>
+							<tr><td><input class="textinput" id="tags" value="instapinboard"/></td></tr>
+						</table>
+						<table class="optionsbody">
+							<tr class="options">
+								<td><input id="toread" type="checkbox"/>Mark bookmarks 'to read'</td>
+								<td><input id="private" type="checkbox"/>Private?</td>
+							</tr>
 						</table>
 						<table class="submitbody">
 							<tr>

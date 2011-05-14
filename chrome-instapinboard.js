@@ -34,8 +34,9 @@ function post(postInfo, account, callback) {
 		{
 			"url": postInfo.url
 			, "description": postInfo.description
-			, "tags": "instapinboard"
-			, "toread": "yes"
+			, "tags": account.tags
+			, "toread": account.toread
+			, "shared": account.shared
 		}, account);
 	req.open("GET", url);
 	req.onreadystatechange = function() {
@@ -76,10 +77,18 @@ function testAccount (postInfo, account, onSuccess) {
 
 function setAcctDetails() {
 	var uname = document.getElementById("uname"),
-		passwd = document.getElementById("passwd");
+		passwd = document.getElementById("passwd"),
+		tags = document.getElementById("tags"),
+		postPrivate = document.getElementById("private"),
+		toRead = document.getElementById("toread");
 	if (uname.value !== "" && passwd.value !== "") {
 		toggleStatus();
-		var account = { "UserName": uname.value, "Password": passwd.value };
+		var account = { 
+			"UserName": uname.value
+			, "Password": passwd.value
+			, "shared": postPrivate.value ? "no" : "yes"
+			, "toread": toRead.value ? "yes" : "no"
+			, "tags": cleanTags(tags.value)};
 		if (localStorage.getItem(queueName)) {
 			var queueContent = localStorage.getItem(queueName);
 			testAccount(queueContent, account, function() {
@@ -95,6 +104,11 @@ function setAcctDetails() {
 	else {
 		alert("Please finish entering the correct values first.");
 	}
+}
+
+function cleanTags(tagstring) {
+	// only letting through a handful of non-word chars. whatever.
+	return tagstring ? tagstring.replace(/[^\w\-_\+\s]/, "") : "";
 }
 
 function toggleStatus() {

@@ -1,7 +1,7 @@
 {
-	"name": "Instapinboard for Chrome"
+	"name": "Instapinboard"
 	, "version": "0.1"
-	, "description": "Right click, add shit to Pinboard.in"
+	, "description": "Right click, add pages to Pinboard.in"
 	, "background_page": "background.html"
 	, "permissions": [
 		"contextMenus"

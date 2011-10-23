@@ -126,3 +126,10 @@ function closeTab() {
 		}
 	});
 }
+
+// Fire up the jams
+var ctxPinboard = chrome.contextMenus.create(
+{
+	"title": "Post to Pinboard"
+	, "onclick": postToPinboard
+});

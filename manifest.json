@@ -1,7 +1,8 @@
 {
 	"name": "Instapinboard"
-	, "version": "0.1"
+	, "version": "0.2"
 	, "description": "Right click, add pages to Pinboard.in"
+	, "content_security_policy": "default-src 'self'; connect-src https://api.pinboard.in "
 	, "background_page": "background.html"
 	, "permissions": [
 		"contextMenus"

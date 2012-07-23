@@ -11,17 +11,16 @@
 						<img class="titlelogo" src="instapinboard_48.png"/>
 					</td>
 					<td id="titlecell">
-						<div>Log into <a href="http://pinboard.in" tabindex=-1>Pinboard.in</a></div>
-						<div>Account info is only stored in your browser!</div>
+						<div>Log into <a target="_blank" href="http://pinboard.in" tabindex=-1>Pinboard.in</a></div>
+						<div>
+							Tokens are stored in your browser. Find yours <a target="_blank" href="http://pinboard.in/settings/password">here.</a></div>
 					</td>
 				</tr>
 				<tr>
 					<form>
 						<table class="formbody">
-							<tr><td>Username:</td></tr>
-							<tr><td><input class="textinput" id="uname"/></td></tr>
-							<tr><td>Password:</td></tr>
-							<tr><td><input class="textinput" id="passwd" type="password"/></td></tr>
+							<tr><td>API Token:</td></tr>
+							<tr><td><input class="textinput" id="token"/></td></tr>
 							<tr><td>Space-delimited tag[s]:</td></tr>
 							<tr><td><input class="textinput" id="tags" value="instapinboard"/></td></tr>
 						</table>
@@ -34,7 +33,7 @@
 						<table class="submitbody">
 							<tr>
 								<td id="submitbutton">
-									<input type="submit" onclick="setAcctDetails();return false;"/>
+									<input id="settingsSubmit" type="submit"/>
 								</td>
 								<td id="status">
 									<img src="spinner.gif"/><span>Verifying Pinboard Account..</span>

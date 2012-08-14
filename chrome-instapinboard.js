@@ -55,9 +55,10 @@ function post(postInfo, account, callback) {
 function postToPinboard(info, tab) {
   "use strict";
   var postInfo = { "url": tab.url, "description": tab.title };
+  var acctDetails = JSON.parse(localStorage.getItem(keyName));
 
-  if (localStorage.getItem(keyName)) {
-    post(postInfo, JSON.parse(localStorage.getItem(keyName)));
+  if (acctDetails && acctDetails.Token) {
+    post(postInfo, acctDetails);
   } else {
     localStorage.setItem(queueName, JSON.stringify(postInfo));
     chrome.tabs.create({ "url": "settings.html" });

@@ -1,6 +1,6 @@
 {
 	"name": "Instapinboard"
-	, "version": "0.3"
+	, "version": "0.4"
 	, "manifest_version": 2 
 	, "description": "Right click, add pages to Pinboard.in"
 	, "content_security_policy": "default-src 'self'; connect-src https://api.pinboard.in "

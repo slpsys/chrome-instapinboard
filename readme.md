@@ -8,6 +8,8 @@ Meant to be an unassuming little guy.
 * Keep on clickin'
 * Almost all of the interface is this:
 
+[Instapinboard on the Chrome Web Store](https://chrome.google.com/webstore/detail/instapinboard/oofoofoceejbfaacjagjgppllfkmmekk)
+
 ![Instapinboard](http://slpsys.com/img/instapinboard.png)
 
 [1]: http://pinboard.in
